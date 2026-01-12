@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Result</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+    <h1>Expense Summary</h1>
+    <p><strong>Pocket Money : </strong>Rs.{{pocket_money}}</p>
+    {% if remaining > 0 %}
+        <p style="color: green;">
+            Abhi Rs.{{remaining}} bache hai laadle sabaasss
+        </p>
+    {% elif remaining < 0%}
+        <p style="color: red;">
+            Laadle Rs.{{remaining}} zada kharch hogaye
+        </p>
+    {% else %}
+        <p style="color: blue;">
+            laadle ekdum shi kuch nhi bacha aur na hi zada kharch hoa
+        </p>
+    {%endif%}
+    <br>
+    <a href="/">Start Again</a>
+    </div>
+</body>
+</html>
